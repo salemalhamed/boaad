@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:boaad/core/constant/AppRoutes.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:get/get.dart';

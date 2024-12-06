@@ -2,6 +2,8 @@ import 'package:boaad/core/views/screens/FirstScreen.dart';
 import 'package:boaad/core/views/screens/SplashScreen.dart';
 import 'package:boaad/core/views/screens/actScreens/LoginScreen.dart';
 import 'package:boaad/core/views/screens/actScreens/angerTest.dart';
+import 'package:boaad/core/views/screens/actScreens/joyScreen.dart';
+import 'package:boaad/core/views/screens/actScreens/sadScreen.dart';
 import 'package:boaad/core/views/screens/actScreens/testScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +14,8 @@ class AppRoutes {
   static const String actlogSscreen = "/actlog";
   static const String testSscren = "/test";
   static const String AngertestScren = "/angertest";
+  static const String JoyScreenc = "/joytest";
+  static const String sadScreenc = "/sadtest";
 
   static Route<dynamic> generteRouts(RouteSettings Rsettings) {
     switch (Rsettings.name) {
@@ -34,6 +38,14 @@ class AppRoutes {
       case "/angertest":
         return MaterialPageRoute(
           builder: (context) => AngertestScreen(),
+        );
+      case "/joytest":
+        return MaterialPageRoute(
+          builder: (context) => JoyScreen(),
+        );
+      case "/sadtest":
+        return MaterialPageRoute(
+          builder: (context) => sadScreen(),
         );
 
       default:

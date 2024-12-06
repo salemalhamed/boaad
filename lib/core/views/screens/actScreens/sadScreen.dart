@@ -7,7 +7,7 @@ class VoiceRecordController extends GetxController {
   var recordingComplete = false.obs;
 }
 
-class AngertestScreen extends StatelessWidget {
+class sadScreen extends StatelessWidget {
   final VoiceRecordController controller = Get.put(VoiceRecordController());
 
   @override
@@ -31,7 +31,7 @@ class AngertestScreen extends StatelessWidget {
               Column(
                 children: [
                   const Text(
-                    "سمة الغضب",
+                    "سمة الحزن",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 35,
