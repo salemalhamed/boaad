@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class VoiceRecordController extends GetxController {
+class AVoiceRecordController extends GetxController {
   var isRecording = false.obs;
   var isPlaying = false.obs;
   var recordingComplete = false.obs;
 }
 
 class AngertestScreen extends StatelessWidget {
-  final VoiceRecordController controller = Get.put(VoiceRecordController());
+  final AVoiceRecordController controller = Get.put(AVoiceRecordController());
 
   @override
   Widget build(BuildContext context) {
@@ -210,7 +210,7 @@ class AngertestScreen extends StatelessWidget {
                   // Next Trait Button
                   ElevatedButton(
                     onPressed: () {
-                      print("Navigating to the next screen...");
+                      Navigator.pushReplacementNamed(context, "/joytest");
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF5D3FD3),

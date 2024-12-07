@@ -122,7 +122,8 @@ class ActLoginScreen extends StatelessWidget {
                         height: 50,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushReplacementNamed(context, "/tset");
+                            Navigator.pushReplacementNamed(
+                                context, "/HomePage");
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFF3B008D),

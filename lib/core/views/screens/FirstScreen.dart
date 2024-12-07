@@ -75,7 +75,7 @@ class FirstScreen extends StatelessWidget {
                           child: InkWell(
                               onTap: () {
                                 Navigator.pushReplacementNamed(
-                                    context, "/actlog");
+                                    context, "/test");
                               },
                               child: Container(
                                   decoration: BoxDecoration(
@@ -98,8 +98,7 @@ class FirstScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushReplacementNamed(
-                                  context, "/actlog");
+                              Navigator.pushReplacementNamed(context, "/test");
                             },
                             child: Container(
                                 decoration: BoxDecoration(

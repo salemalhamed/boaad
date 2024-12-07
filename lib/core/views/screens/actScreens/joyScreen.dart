@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class VoiceRecordController extends GetxController {
+class JVoiceRecordController extends GetxController {
   var isRecording = false.obs;
   var isPlaying = false.obs;
   var recordingComplete = false.obs;
 }
 
 class JoyScreen extends StatelessWidget {
-  final VoiceRecordController controller = Get.put(VoiceRecordController());
+  final JVoiceRecordController controller = Get.put(JVoiceRecordController());
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class JoyScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 30),
                   const Text(
-                    "سجل صوتك أثناء قراءة النص مع التركيز على \nالتعبير عن الغضب من خلال صراخ غاضب ونبرة هادئة تحمل شدة الغضب الداخلي",
+                    'سجل صوتك أثناء قراءة النص مع التركيز\n على التعبير عن الفرح والفرحة بنبرة مرتفعة\nتعكس السعادة العارمة',
                     style: TextStyle(
                         color: Color.fromARGB(255, 255, 255, 255),
                         fontSize: 22,
@@ -58,7 +58,7 @@ class JoyScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: const Text(
-                      "لقد أخبرتك مرارًا وتكرارًا أن هذا الأمر يجب أن ينجز اليوم! كيف يمكنني العمل وسط هذه الفوضى؟ أريد حلاً الآن",
+                      "لقد فعلناها أخيرًا  \nكل الجهود لم تذهب سدى يا إلهي لا أصدق أننا فزنا بالجائزة الكبرى ! الجميع سيعرف الآن أن فريقنا هو الأفضل",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 22,
@@ -210,7 +210,7 @@ class JoyScreen extends StatelessWidget {
                   // Next Trait Button
                   ElevatedButton(
                     onPressed: () {
-                      print("Navigating to the next screen...");
+                      Navigator.pushReplacementNamed(context, "/sadtest");
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF5D3FD3),
