@@ -1,4 +1,4 @@
-import 'package:boaad/core/constant/app_routes.dart';
+import 'package:boaad/core/constants/app_routes.dart';
 import 'package:boaad/features/splash/view/screens/splash_screen.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
