@@ -1,49 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ChoosePathWidget extends StatelessWidget {
   final IconData icon;
   final String label;
+  final Color? color;
   const ChoosePathWidget({
     super.key,
     required this.icon,
     required this.label,
+    this.color,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Add navigation or function when the card is tapped.
+        // TODO: change to dynamic name
+        Get.toNamed('/test');
       },
       child: Container(
         width: 140,
         height: 180,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: color ?? Colors.black,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: Offset(0, 3),
-            ),
-          ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               icon,
-              size: 60,
-              color: Colors.blue[700],
+              size: 56,
+              color: Colors.white,
             ),
-            SizedBox(height: 10),
             Text(
               label,
               style: TextStyle(
-                fontSize: 18,
-                color: Colors.black,
+                fontSize: 24,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ],
