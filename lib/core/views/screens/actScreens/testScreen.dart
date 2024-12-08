@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TestScreen extends StatelessWidget {
+  const TestScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +48,7 @@ class TestScreen extends StatelessWidget {
               ],
             ),
             // Icon in the middle
-            Container(
+            SizedBox(
               height: 200,
               width: 200,
               child: Image.asset(
