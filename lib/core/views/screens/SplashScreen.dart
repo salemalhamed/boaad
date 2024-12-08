@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreenss extends StatefulWidget {
+  const SplashScreenss({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenss> createState() => _SplashScreenssState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenssState extends State<SplashScreenss> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
