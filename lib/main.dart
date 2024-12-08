@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       builder: DevicePreview.appBuilder,
-      theme: ThemeData(useMaterial3: false),
+      theme: ThemeData(
+        fontFamily: 'Cairo',
+        useMaterial3: false,
+      ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRoutes.generatesRoutes,
       unknownRoute: AppRoutes.unknownScreenGetPage,
