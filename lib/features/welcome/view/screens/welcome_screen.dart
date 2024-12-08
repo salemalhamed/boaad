@@ -1,4 +1,4 @@
-import 'package:boaad/core/constant/app_images.dart';
+import 'package:boaad/core/constants/app_images.dart';
 import 'package:boaad/core/theme/theme_controller.dart';
 import 'package:boaad/features/welcome/view/widgets/choose_path_widget.dart';
 import 'package:flutter/material.dart';
