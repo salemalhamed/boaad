@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
       ),
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: AppRoutes.generatesRoutes,
       unknownRoute: AppRoutes.unknownScreenGetPage,
       initialRoute: SplashScreen.routeName,
       getPages: AppRoutes.getPages,
