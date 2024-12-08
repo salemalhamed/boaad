@@ -1,3 +1,4 @@
+import 'package:boaad/core/constant/app_images.dart';
 import 'package:boaad/core/theme/theme_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
               height: 100,
               width: 100,
               child: Image.asset(
-                "assets/images/lo.png",
+                AppImages.appLogo,
                 fit: BoxFit.fill,
               ),
             ),
