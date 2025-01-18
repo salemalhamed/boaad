@@ -1,7 +1,13 @@
 import 'package:boaad/core/constants/app_images.dart';
 import 'package:boaad/core/theme/theme_controller.dart';
+import 'package:boaad/features/auth/controller/auth_controller.dart';
+import 'package:boaad/features/auth/logic/model/user_type.dart';
+import 'package:boaad/features/auth/view/screens/auth_wrapper.dart';
+import 'package:boaad/features/auth/view/screens/register_screen.dart';
 import 'package:boaad/features/welcome/view/widgets/choose_path_widget.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static const String routeName = '/welcome_screen';
@@ -9,6 +15,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(AuthController());
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -41,20 +48,47 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ChoosePathWidget(
-                    icon: Icons.movie_outlined,
-                    label: 'مُنتج',
-                    color: Color.fromARGB(255, 186, 0, 0),
+                    icon: Icons.recent_actors_outlined,
+                    label: 'نجم موهوب',
+                    nextPagePath: RegisterScreen.routeName,
+                    color: Color.fromARGB(255, 115, 178, 255),
+                    userType: UserType(id: 5, name: 'performer'),
                   ),
                   const SizedBox(width: 24),
                   ChoosePathWidget(
-                    icon: Icons.recent_actors_outlined,
-                    label: 'ممثل',
-                    color: Color.fromARGB(255, 115, 178, 255),
+                    icon: Icons.movie_outlined,
+                    label: 'مُكتشف',
+                    nextPagePath: RegisterScreen.routeName,
+                    color: Color.fromARGB(255, 186, 0, 0),
+                    userType: UserType(id: 4, name: 'recruiter'),
                   ),
                 ],
+              ),
+              const SizedBox(height: 64.0),
+              RichText(
+                text: TextSpan(
+                  text: 'لديك حساب بالفعل؟ ',
+                  style: TextStyle(
+                    fontFamily: 'Tajawal',
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'تسجيل دخول',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () => Get.offNamed(AuthWrapper.routeName),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
